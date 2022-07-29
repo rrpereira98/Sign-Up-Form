@@ -26,49 +26,52 @@
                 </p>
                 <p>You know you want to.</p>
             </div>
-            <div class="form">
-                <p class="form_text">Let's do this!</p>
-                
-                <div class="form_row">
-                    <div class="input">
-                        <label for="firstName">FIRST NAME</label>
-                        <input type="text" name="firstName" id="firstName">
-                    </div>    
+            <form action="/" method="post">
+                <div class="form">
+                    <p class="form_text">Let's do this!</p>
                     
-                    <div class="input">
-                        <label for="lastName">LAST NAME</label>
-                        <input type="text" name="lastName" id="lastName">
+                    <div class="form_row">
+                        <div class="input">
+                            <label for="firstName">FIRST NAME</label>
+                            <input type="text" name="firstName" id="firstName" placeholder=" " required>
+                        </div>    
+                        
+                        <div class="input">
+                            <label for="lastName">LAST NAME</label>
+                            <input type="text" name="lastName" id="lastName" placeholder=" " required>
+                        </div>
+                    </div>
+
+                    <div class="form_row">
+                        <div class="input">
+                            <label for="email">EMAIL</label>
+                            <input type="email" name="email" id="email" placeholder=" " required>
+                        </div>
+
+                        <div class="input">
+                            <label for="phoneNumber">PHONE NUMBER</label>
+                            <input type="tel" name="phoneNumber" id="phoneNumber" placeholder=" " required>
+                        </div>
+                    </div>
+
+                    <div class="form_row">
+                        <div class="input">
+                            <label for="password">PASSWORD</label>
+                            <input type="password" name="password" id="password" placeholder=" " required>
+                            <p class="passError">* Passwords do not match</p>
+                        </div>
+
+                        <div class="input">
+                            <label for="confirmPassword">CONFIRM PASSWORD</label>
+                            <input type="password" name="confirmPassword" id="confirmPassword" placeholder=" " required>
+                        </div>
                     </div>
                 </div>
-
-                <div class="form_row">
-                    <div class="input">
-                        <label for="email">EMAIL</label>
-                        <input type="email" name="email" id="email">
-                    </div>
-
-                    <div class="input">
-                        <label for="phoneNumber">PHONE NUMBER</label>
-                        <input type="tel" name="phoneNumber" id="phoneNumber">
-                    </div>
+                <div class="login_section">
+                    <button type="submit" class="createAccountBtn">Create Account</button>
+                    <p class="login">Already have an account? <a href="">Log in</a></p>
                 </div>
-
-                <div class="form_row">
-                    <div class="input">
-                        <label for="password">PASSWORD</label>
-                        <input type="password" name="password" id="password">
-                    </div>
-
-                    <div class="input">
-                        <label for="confirmPassword">CONFIRM PASSWORD</label>
-                        <input type="password" name="confirmPassword" id="confirmPassword">
-                    </div>
-                </div>
-            </div>
-            <div class="login_section">
-                <button>Create Account</button>
-                <p class="login">Already have an account? <a href="">Log in</a></p>
-            </div>
+            </form>
         </div>
     </div>
 

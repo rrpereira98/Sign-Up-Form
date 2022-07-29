@@ -48,16 +48,20 @@ h1 {
 
 .content {
     flex: 3;
+    display: flex;
+    flex-direction: column;
 }
 
 .text_area {
-    padding: 15vh 0 7vh 80px
+    flex: 1;
+    padding: 15vh 0 7vh 80px;
+    max-height: 130px;
 }
 
 p {
     font-weight: 600;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 1.6rem;
+    font-size: 1.3rem;
 }
 
 .main_text {
@@ -65,6 +69,7 @@ p {
 }
 
 .form {
+    flex: 1;
     background-color: white;
     display: flex;
     flex-direction: column;
@@ -102,20 +107,44 @@ input {
     font-size: 1.05rem;
     padding: 3px 10px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-
+    border: 1px solid #E5E7EB;
+    border-radius: 5px;
 }
 
+input:focus {
+    outline: none !important;
+    border:1px solid blue;
+    
+    box-shadow: 3px 5px 5px 0px rgba(0,0,0,0.15);
+    -webkit-box-shadow: 3px 5px 5px 0px rgba(0,0,0,0.15);
+  }
+
+  input:not(:focus):not(:placeholder-shown):invalid {
+    border:1px solid red;
+  }
+
+  .error {
+    border:1px solid red;
+  }
+
 .login_section {
+    flex: 1;
     padding-left: 80px;
     padding-top: 6vh;
 }
 
-button {
+.passError {
+    font-size: 0.6rem;
+    color: red;
+    display: none;
+}
+
+.createAccountBtn {
     border: none;
     background-color: #596D48;
-    padding: 15px 60px;
+    padding: 13px 40px;
     border-radius: 10px;
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: 600;
     color: white;
@@ -124,9 +153,13 @@ button {
     -webkit-box-shadow: 3px 5px 5px 0px rgba(0,0,0,0.15);
 }
 
+.createAccountBtn:hover {
+    background-color: #48563b;
+}
+
 .login {
-    font-size: 1.2rem;
-    margin-top: 3.5vh;
+    font-size: 1rem;
+    margin-top: 2vh;
     font-weight: 600;
 }
 
